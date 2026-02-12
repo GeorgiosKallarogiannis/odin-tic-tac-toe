@@ -28,3 +28,21 @@ pre {
 small {
   font-size: 80%;
 }
+
+#gameboard {
+  --board: 360px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  width: var(--board);
+  height: var(--board);
+  background-color: red;
+
+  div {
+    font-size: 3rem;
+    text-align: center;
+    align-content: center;
+    border: 1px solid black;
+  }
+}
