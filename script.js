@@ -22,10 +22,10 @@
   confirmBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
-    playerOneField.children[0].innerText = playerOneName.value;
-    playerTwoField.children[0].innerText = playerTwoName.value;
-    playerOneField.children[1].innerText = player1.score;
-    playerTwoField.children[1].innerText = player2.score;
+    playerOneField.children[1].innerText = playerOneName.value;
+    playerTwoField.children[1].innerText = playerTwoName.value;
+    playerOneField.children[3].innerText = player1.score;
+    playerTwoField.children[3].innerText = player2.score;
 
     gameStarted = 1;
     gameController(gameStarted, player1, player2);
@@ -98,12 +98,12 @@
       if (boardState.some((x) => x.toString() === "x,x,x")) {
         console.log("Player1 Wins");
         player1.score++;
-        playerOneField.children[1].innerText = player1.score;
+        playerOneField.children[3].innerText = player1.score;
         return 1;
       } else if (boardState.some((x) => x.toString() === "o,o,o")) {
         console.log("Player2 Wins");
         player2.score++;
-        playerTwoField.children[1].innerText = player2.score;
+        playerTwoField.children[3].innerText = player2.score;
         return 1;
       }
     }
@@ -164,7 +164,8 @@
     const htmlboard = document.querySelector("#gameboard");
 
     for (let i = 0; i < flatArr.length; i++) {
-      htmlboard.children[i].innerText = flatArr[i];
+      htmlboard.children[i].children[0].innerText = flatArr[i];
+      console.log({ htmlboard });
     }
   }
 
@@ -176,10 +177,10 @@
     player1.score = 0;
     player2.score = 0;
 
-    playerOneField.children[0].innerText = "";
-    playerTwoField.children[0].innerText = "";
     playerOneField.children[1].innerText = "";
     playerTwoField.children[1].innerText = "";
+    playerOneField.children[3].innerText = "";
+    playerTwoField.children[3].innerText = "";
 
     clearBoard(board);
   }

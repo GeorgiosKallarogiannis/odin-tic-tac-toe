@@ -10,49 +10,78 @@
 </head>
 
 <body>
-    <div id="gameboard">
-        <div data-row="0" data-column="0"></div>
-        <div data-row="0" data-column="1"></div>
-        <div data-row="0" data-column="2"></div>
-        <div data-row="1" data-column="0"></div>
-        <div data-row="1" data-column="1"></div>
-        <div data-row="1" data-column="2"></div>
-        <div data-row="2" data-column="0"></div>
-        <div data-row="2" data-column="1"></div>
-        <div data-row="2" data-column="2"></div>
-    </div>
-    <dialog id="playerNameForm">
-        <form>
-            <div>
+    <div class="tic-tac-toe">
+        <div class="section-one">
+            <div id="playerOneSection">
+                <p class="player-one-title">Player One:</p>
+                <p class="player-one-name"></p>
+                <p class="score-title">Score:</p>
+                <p class="score-value"></p>
+            </div>
+        </div>
+        <div class="section-two">
+            <div id="playerTwoSection">
+                <p class="player-one-title">Player Two:</p>
+                <p class="player-two-name"></p>
+                <p class="score-title">Score:</p>
+                <p class="score-value"></p>
+            </div>
+        </div>
+        <div id="gameboard">
+            <div data-row="0" data-column="0">
+                <p></p>
+            </div>
+            <div data-row="0" data-column="1">
+                <p></p>
+            </div>
+            <div data-row="0" data-column="2">
+                <p></p>
+            </div>
+            <div data-row="1" data-column="0">
+                <p></p>
+            </div>
+            <div data-row="1" data-column="1">
+                <p></p>
+            </div>
+            <div data-row="1" data-column="2">
+                <p></p>
+            </div>
+            <div data-row="2" data-column="0">
+                <p></p>
+            </div>
+            <div data-row="2" data-column="1">
+                <p></p>
+            </div>
+            <div data-row="2" data-column="2">
+                <p></p>
+            </div>
+        </div>
+        <dialog id="playerNameForm">
+            <form>
                 <div>
-                    <label for="playerOne">First Player Name</label>
-                    <input type="text" id="playerOne">
+                    <div>
+                        <label for="playerOne">Player One Name: </label>
+                        <input type="text" id="playerOne">
+                    </div>
+                    <div>
+                        <label for="playerTwo">Player Two Name: </label>
+                        <input type="text" id="playerTwo">
+                    </div>
                 </div>
                 <div>
-                    <label for="playerTwo">Second Player Name</label>
-                    <input type="text" id="playerTwo">
+                    <button id="confirmBtn">Confirm</button>
+                    <button formmethod="dialog">Cancel</button>
                 </div>
-            </div>
-            <div>
-                <button id="confirmBtn">Confirm</button>
-                <button formmethod="dialog">Cancel</button>
-            </div>
-        </form>
-    </dialog>
-    <div class="new-game">
-        <button id="newGameBtn">New Game</button>
+            </form>
+        </dialog>
+        <div class="new-game">
+            <button id="newGameBtn">New Game</button>
+        </div>
+        <div class="reset">
+            <button id="resetBtn">Reset Game</button>
+        </div>
     </div>
-    <div class="reset">
-        <button id="resetBtn">Reset Game</button>
-    </div>
-    <div id="playerOneSection">
-        <p></p>
-        <p></p>
-    </div>
-    <div id="playerTwoSection">
-        <p></p>
-        <p></p>
-    </div>
+
 </body>
 
 </html>
